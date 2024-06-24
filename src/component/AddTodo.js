@@ -76,7 +76,6 @@ class AddTodo extends Component {
             label="Due Date"
             value={this.state.due}
             onChange={this.handleDateChange}
-            data-testid="new-date"
             renderInput={(params) => <TextField {...params} />}
           />
         </LocalizationProvider>

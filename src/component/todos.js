@@ -23,7 +23,10 @@ const Todos = ({ todos, deleteTodo }) => {
 
       return (
         <Grid key={todo.id}>
-          <Card style={{ marginTop: 10, background: dueColor }}>
+          <Card
+            style={{ marginTop: 10, background: dueColor }}
+            data-testid="cardID"
+          >
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} as well as its 
             current date/time {todo.date}. Also, the item's id is utilized in order to correctly delete an item from the Todo list*/}
@@ -33,6 +36,7 @@ const Todos = ({ todos, deleteTodo }) => {
                 style={{ paddingLeft: 0 }}
                 color="primary"
                 onClick={() => deleteTodo(todo.id)}
+                data-testid="checkboxID"
               />
               <ListItemText primary={todo.content} secondary={todo.date} />
             </ListItemButton>

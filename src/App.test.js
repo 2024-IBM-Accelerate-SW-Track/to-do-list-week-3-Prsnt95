@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { unmountComponentAtNode } from "react-dom";
 import App from "./App";
-import AddTodo from "./component/AddTodo.js";
 
 let container = null;
 beforeEach(() => {
